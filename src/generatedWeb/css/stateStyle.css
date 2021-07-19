@@ -1,0 +1,155 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600&display=swap");
+
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+
+html {
+	scroll-behavior: smooth;
+}
+
+body {
+	background: rgb(245, 242, 242);
+	font-family: "Poppins", sans-serif;
+}
+
+/* containers styles */
+
+.container {
+	margin: auto;
+	margin: 0 2rem 0 2rem;
+}
+
+.flex-container {
+	display: flex;
+	justify-content: space-around;
+}
+
+p {
+	margin-bottom: 1rem;
+}
+
+.sections {
+	margin-bottom: 3rem;
+}
+
+/* headings styles */
+
+h1 {
+	font-size: 4rem;
+	color: tomato;
+	text-transform: capitalize;
+	text-decoration: underline;
+	display: inline;
+	margin-right: 2rem;
+}
+
+.heading-flag {
+	display: flex;
+	height: 4rem;
+	margin: 2rem 0 3rem 0;
+	align-items: center;
+}
+
+.heading-flag img {
+	height: 100%;
+	border-radius: 0.3rem;
+}
+
+h2 {
+	font-size: 2.5rem;
+	color: tomato;
+	margin-bottom: 1rem;
+}
+
+h3 {
+	font-size: 1.7rem;
+	margin-bottom: 0.8rem;
+}
+
+/* menu styles */
+
+.card {
+	background: rgb(235, 231, 231);
+	box-shadow: 19px 15px 30px 1px rgba(128, 125, 125, 0.2);
+	border-radius: 1rem;
+	padding: 2rem;
+}
+
+.menu {
+	height: 32rem;
+	position: sticky;
+	top: 2rem;
+	margin-right: 2rem;
+	margin-bottom: 2rem;
+	flex-shrink: 0;
+	flex-basis: 22rem;
+	padding-left: 2rem 0 2rem 0;
+}
+
+.menu li {
+	list-style-type: none;
+}
+
+.menu li a,
+.menu li i {
+	text-decoration: none;
+	font-size: 1.5rem;
+	color: tomato;
+	transition: all 0.3s ease;
+}
+
+.menu li i {
+	padding-right: 0.5rem;
+}
+
+.menu li a {
+	font-weight: 500;
+}
+
+.menu li a:hover {
+	text-decoration: underline;
+	font-size: 1.7rem;
+	padding-right: 0;
+}
+
+.menu hr {
+	height: 3px;
+	margin-bottom: 1rem;
+	background: tomato;
+	border: none;
+	border-radius: 4px;
+}
+
+/* scroll up button styles */
+
+.scroll-up-btn {
+	height: 3rem;
+	width: 3rem;
+	position: fixed;
+	bottom: 1rem;
+	right: 1rem;
+	z-index: 100;
+	background-color: tomato;
+	color: white;
+	font-size: 2rem;
+	line-height: 3rem;
+	text-align: center;
+	border-radius: 0.4rem;
+	cursor: pointer;
+	opacity: 0;
+	pointer-events: none;
+	transition: all 0.3s ease;
+}
+
+.scroll-up-btn.show {
+	bottom: 2rem;
+	opacity: 1;
+	pointer-events: auto;
+}
+
+.map {
+	border-radius: 1rem;
+}

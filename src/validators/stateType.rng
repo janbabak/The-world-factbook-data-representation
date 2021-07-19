@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<grammar xmlns="http://relaxng.org/ns/structure/1.0" datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes">
+  <start>
+    <element name="state">
+      <attribute name="name">
+        <data type="string">
+          <param name="minLength">3</param>
+          <param name="maxLength">50</param>
+        </data>
+      </attribute>
+      <zeroOrMore>
+        <element name="section">
+          <attribute name="heading">
+            <ref name="headingContent"/>
+          </attribute>
+          <zeroOrMore>
+            <element name="subsection">
+              <attribute name="heading">
+                <ref name="headingContent"/>
+              </attribute>
+              <zeroOrMore>
+                <element name="subsectionparagraph">
+                  <oneOrMore>
+                    <element name="field">
+                      <optional>
+                        <element name="subject">
+                          <data type="string">
+                            <param name="minLength">1</param>
+                            <param name="maxLength">100</param>
+                          </data>
+                        </element>
+                      </optional>
+                      <element name="data">
+                        <data type="string">
+                          <param name="minLength">1</param>
+                          <param name="maxLength">1500</param>
+                        </data>
+                      </element>
+                    </element>
+                  </oneOrMore>
+                </element>
+              </zeroOrMore>
+            </element>
+          </zeroOrMore>
+        </element>
+      </zeroOrMore>
+    </element>
+  </start>
+  <define name="headingContent">
+    <data type="string">
+      <param name="minLength">3</param>
+      <param name="maxLength">100</param>
+    </data>
+  </define>
+</grammar>

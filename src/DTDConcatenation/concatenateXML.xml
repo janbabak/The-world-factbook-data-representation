@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+
+<!DOCTYPE states SYSTEM "../validators/stateType.dtd"
+    [
+        <!ENTITY author SYSTEM "../author/authorInfo.xml">
+
+        <!ENTITY france SYSTEM "../generatedXML/france.xml">
+        <!ENTITY germany SYSTEM "../generatedXML/germany.xml">
+        <!ENTITY switzerland SYSTEM "../generatedXML/switzerland.xml">
+        <!ENTITY united-kingdom SYSTEM "../generatedXML/united-kingdom.xml">
+    ]
+>
+
+<data>
+    &author;
+    <states>
+        &france;
+        &germany;
+        &switzerland;
+        &united-kingdom;
+    </states>
+</data>

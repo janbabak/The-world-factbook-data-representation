@@ -1,0 +1,35 @@
+datatypes xs = "http://www.w3.org/2001/XMLSchema-datatypes"
+
+grammar {
+    start = element state {
+        attribute name {
+            xs:string { minLength="3" maxLength="50" }
+        },
+
+        element section {
+            attribute heading { headingContent },
+            
+            element subsection {
+                attribute heading { headingContent },
+
+                element subsectionparagraph {
+
+                    element field {
+
+                        element subject {
+                            xs:string { minLength="1" maxLength="100" }
+                        }?,
+
+                        element data {
+                            xs:string { minLength="1" maxLength="1500" }
+                        }
+                    }+
+                }*
+            }*
+        }*
+    }
+
+    headingContent =
+        xs:string { minLength="3" maxLength="100" }
+    
+}

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!ELEMENT state (section*)>
+<!ELEMENT section (subsection*)>
+<!ELEMENT subsection (subsectionparagraph)*>
+<!ELEMENT subsectionparagraph (field)+>
+<!ELEMENT field (subject*, data+)>
+<!ELEMENT subject (#PCDATA)>
+<!ELEMENT data (#PCDATA)>
+<!ATTLIST state name CDATA #REQUIRED>
+<!ATTLIST section heading CDATA #REQUIRED>
+<!ATTLIST subsection heading CDATA #REQUIRED>
